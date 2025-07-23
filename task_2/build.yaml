@@ -1,0 +1,9 @@
+name: Build Docker Image
+on:
+  push:
+    branches: [ main ]
+steps:
+  - uses: actions/checkout@v4
+  - name: Build Docker image
+  run: |
+    docker build -t kitty-app:latest ./task_2/Dockerfile 
